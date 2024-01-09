@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #F1C7C7;
+    --main-color: #AC3B61;
+    --text-color: #123C69;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--main-color);
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--main-color);
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.7rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-right: 3.5rem;
+}
+
+.navbar a.active {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+#health-icon {
+    font-size: 2.2rem;
+    color: var(--text-color);
+}
+
+.heading {
+    margin: 5% 2.5% 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.bmi-container {
+    margin: 5% 2% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bmi-content {
+    max-width: 50%;
+    background: var(--white-color);
+    border-radius: 2rem;
+    border-top: .8rem solid var(--main-color);
+    border-bottom: .8rem solid var(--main-color);
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+}
+
+.bmi-input {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.bmi-input input {
+    max-width: 95%;
+    color: var(--text-color);
+    margin: 2rem 0 1rem;
+    padding:.2rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--shadow-color);
+}
+
+.bmi-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5rem 2rem;
+}
+
+.bmi-buttons i {
+    padding: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: .5s ease;
+}
+
+.bmi-buttons i:hover {
+    border: .2rem solid var(--text-color);
+    background: var(--main-color);
+    color: var(--white-color);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bmi-answer {
+    margin: 4rem 2rem;
+    width:30%;
+    text-align: center;
+}
+
+.bmi-answer h2 {
+    font-size: 3rem;
+    margin: 1rem;
+    color: var(--text-color);
+}
+
+.bmi-answer h1 {
+    font-size: 8rem;
+    color: var(--main-color);
+}
+
+.result-bar-section {
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.result-bar-section p {
+    display: none;
+    font-weight: 600;
+}
+
+.result-bar {
+    width: 20%;
+    height: 2rem;
+    display: none;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    box-shadow: 0 .2rem .5rem var(--shadow-color);
+    background: linear-gradient(
+    to right,
+    rgb(230,56,77) 0%, 
+    rgb(230,56,77) 30.8%, 
+    rgb(72, 174, 31) 30.8%,
+    rgb(72, 174, 31) 35%,
+    rgb(255, 255, 255)  35%,
+    rgb(255, 255, 255)  35.5%,
+    rgb(72, 174, 31) 35.5%,
+    rgb(72, 174, 31) 41.7%,
+    rgb(230,56,77) 41.7%,
+    rgb(230,56,77) 50%,
+    rgb(199, 5, 27) 50%,
+    rgb(199, 5, 27) 58.3%,
+    rgb(137, 3, 19) 58.3%,
+    rgb(137, 3, 19) 66.7%,
+    rgb(81, 1, 10) 66.7%, 
+    rgb(81, 1, 10) 100%
+  );
+}
+
+
+@media (max-width: 1300px) {
+    .heading {
+        margin: 5% 2.5% 0;
+    }
+
+    .bmi-container {
+        margin: 5% 2% 0;
+    }
+    .bmi-answer h2 {
+        font-size: 3rem;
+    }
+    
+    .bmi-answer h1 {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .bmi-answer h2 {
+        font-size: 3rem;
+    }
+    
+    .bmi-answer h1 {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 2.2rem;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
+    #health-icon {
+        font-size: 2rem;
+    }
+
+    .bmi-container {
+        margin: 10% 5% 0;
+    }
+
+    .bmi-buttons i {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .bmi-answer h2 {
+    font-size: 3rem;
+    }
+
+    .bmi-answer h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+    }
+
+    #health-icon {
+        font-size: 2rem;
+    }
+
+    .heading h4 {
+        font-size: 1.5rem;
+    }
+
+    .bmi-buttons i {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .bmi-answer h2 {
+    font-size: 2rem;
+    }
+
+    .bmi-answer h1 {
+        font-size: 1.5rem;
+    }
+}

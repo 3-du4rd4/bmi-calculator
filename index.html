@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>BMI Calculator</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">BMI Calculator</a>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="https://en.wikipedia.org/wiki/Body_mass_index">About BMI</a>
+      </nav>
+
+      <div class="bx bx-health" id="health-icon"></div>
+    </header>
+
+    <section class="heading">
+      <h4>Let's calculate your Body Mass Index!</h4>
+    </section>
+
+    <section class="bmi-container" id="bmi-container">
+      <div class="bmi-content">
+        <div class="bmi-input" id="bmi-input">
+          <input type="text" id="height" placeholder="Your Height" />
+          <input type="text" id="weight" placeholder="Your Weight" />
+        </div>
+
+        <div class="bmi-buttons">
+          <i class="bx bx-calculator" onclick="calculateBmi()"></i>
+          <i class="bx bx-reset" onclick="resetValues()"></i>
+        </div>
+      </div>
+
+      <div class="bmi-answer">
+        <h2>YOUR BMI IS</h2>
+        <h1 id="answer">_ _</h1>
+      </div>
+    </section>
+
+    <section class="result-bar-section">
+      <div class="result-bar" id="result-bar"></div>
+      <p id="result-text">Normal Weight</p>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
